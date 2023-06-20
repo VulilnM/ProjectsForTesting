@@ -18,7 +18,7 @@ namespace UserService.Data
 
         public User GetUserById(int id)
         {
-            if(id == null)
+            if (id == null)
                 throw new ArgumentNullException(nameof(id));
             else
                 return _context.Users.FirstOrDefault(p => p.UserId == id);
@@ -26,9 +26,9 @@ namespace UserService.Data
 
         public void RegisterUser(User usr)
         {
-            if(usr == null)
+            if (usr == null)
                 throw new ArgumentNullException(nameof(usr));
-            else 
+            else
                 _context.Users.Add(usr);
         }
 

@@ -11,8 +11,8 @@ namespace UserService.Profiles
             // Read Scenario
             // Source        ->    Target
             // fromDb(model) ->    Dto
-            CreateMap<User, UserReadDto> ();
-            CreateMap<UserCreateDto, User> ();
+            CreateMap<User, UserReadDto>();
+            CreateMap<UserCreateDto, UserCreateDto>();
         }
     }
 }
