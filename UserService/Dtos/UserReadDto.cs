@@ -1,13 +1,10 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace UserService.Models
+namespace UserService.Dtos
 {
-    public class User
+    public class UserReadDto
     {
-        [Key]
-        public int UserId { get; set; }
         public string UserName { get; set; }
-        public string Password { get; set;}
         public string? Name { get; set; }
         public string? LastName { get; set; }
     }
