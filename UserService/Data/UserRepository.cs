@@ -16,12 +16,12 @@ namespace UserService.Data
             return _context.Users.ToList();
         }
 
-        public User GetUserById(int id)
+        public User GetUserByUsername(string usrname)
         {
-            if (id == null)
-                throw new ArgumentNullException(nameof(id));
+            if (usrname == null)
+                throw new ArgumentNullException(nameof(usrname));
             else
-                return _context.Users.FirstOrDefault(p => p.UserId == id);
+                return _context.Users.FirstOrDefault(p => p.UserName == usrname);
         }
 
         public void RegisterUser(User usr)

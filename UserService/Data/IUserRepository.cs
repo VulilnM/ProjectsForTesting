@@ -7,7 +7,7 @@ namespace UserService.Data
         bool SaveChanges();
 
         IEnumerable<User> GetAllUsers();
-        User GetUserById(int id);
+        User GetUserByUsername(string usrname);
         void RegisterUser(User usr);
     }
 }

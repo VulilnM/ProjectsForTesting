@@ -12,7 +12,7 @@ namespace UserService.Profiles
             // Source        ->    Target
             // fromDb(model) ->    Dto
             CreateMap<User, UserReadDto>();
-            CreateMap<UserCreateDto, UserCreateDto>();
+            CreateMap<UserCreateDto, User>();
         }
     }
 }

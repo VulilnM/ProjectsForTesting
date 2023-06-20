@@ -10,10 +10,10 @@ namespace UserService.Dtos
         public string Password { get; set; }
 
         [Required]
-        public string? Name { get; set; }
+        public string Name { get; set; }
 
         [Required]
-        public string? LastName { get; set; }
+        public string LastName { get; set; }
     }
 
 }
