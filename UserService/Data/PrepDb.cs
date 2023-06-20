@@ -26,6 +26,8 @@ namespace UserService.Data
                     new User() {UserId=12348, UserName="vulinmg", Name="Dragan", LastName="Rakic"},
                     new User() {UserId=12349, UserName="vulinmh", Name="Jovan", LastName="Mikic"}
                 );
+
+                appDbContext.SaveChanges();
             }
             else
             {
