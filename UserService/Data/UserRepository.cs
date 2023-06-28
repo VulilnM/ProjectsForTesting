@@ -17,7 +17,10 @@ namespace UserService.Data
         }
 
         public User GetUserByUsername(string usrname)
-        {
+        { // nullable
+          // validacija u middleware
+          // EntityFraework sam po sebi vec implementira DBContext i UoW
+          
             if (usrname == null)
                 throw new ArgumentNullException(nameof(usrname));
             else

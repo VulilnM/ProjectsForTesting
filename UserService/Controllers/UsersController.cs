@@ -21,6 +21,9 @@ namespace UserService.Controllers
             _mapper = mapper;
         }
 
+        // wrap in try catch
+        // eksplicitno deklarisi error code za svaki use case (errors)
+        // objasni rezultat svake potencijalne akcije 
         [HttpGet]
         public ActionResult<IEnumerable<UserReadDto>> GetUsers()
         {
@@ -31,6 +34,8 @@ namespace UserService.Controllers
             return Ok(_mapper.Map<IEnumerable<UserReadDto>>(userItem));
         }
 
+        // eksplicitno definisi tip podataka za rute/metode 
+        // async/await
         [HttpGet("{usrname}", Name = "GetUserByUsername")]
         public ActionResult<UserReadDto> GetUserByUsername(string usrname)
         {
@@ -50,6 +55,7 @@ namespace UserService.Controllers
             var userModel = _mapper.Map<User>(userCreateDto);
            
             _repository.RegisterUser(userModel);
+            // ne pozivati repo direktno is kontrolera
             _repository.SaveChanges();
              Console.WriteLine("Registered new user:" + userModel.UserName + " succesfully!");
                  

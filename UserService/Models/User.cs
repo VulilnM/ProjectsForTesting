@@ -2,6 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace UserService.Models
 {
+    // Explore IdentityFramework and try to implement 
     public class User
     {
         [Key]
